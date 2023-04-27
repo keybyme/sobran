@@ -194,6 +194,11 @@ namespace sobran
 
         private void btnDelete2_Click(object sender, EventArgs e)
         {
+            if (dataGridView2.Rows.Count <= 0)
+            {
+                MessageBox.Show("Nothing to delete");
+                return;
+            }
             int currentSelectionUser = dataGridView2.CurrentCell.RowIndex;
 
             DialogResult dialogResult = MessageBox.Show($"Are you sure to you want to delete {dataGridView2.Rows[currentSelectionUser].Cells[0].Value}?", "Confirm", MessageBoxButtons.YesNo);
@@ -230,7 +235,7 @@ namespace sobran
         {
             int month = now.Month;
             int day = now.Day;
-            System.Diagnostics.Process.Start($"{dirPath2}\\callouts_({month}_{day}).csv");
+            System.Diagnostics.Process.Start($"{dirPath2}\\callouts_({DateTime.Now.ToString("M_dd_yyyy")}).csv");
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
@@ -283,6 +288,12 @@ namespace sobran
         public string strReplace(string str)
         {
             return str.Replace('/', '_');
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            exportCsvForm2();
+            MessageBox.Show("Updated");
         }
     }
 }

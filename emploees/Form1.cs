@@ -350,6 +350,11 @@ namespace sobran
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.Rows.Count <= 0)
+            {
+                MessageBox.Show("Nothing to delete");
+                return;
+            }
             int currentSelectionUser = dataGridView1.CurrentCell.RowIndex;
 
             DialogResult dialogResult = MessageBox.Show($"Are you sure to you want to delete {dataGridView1.Rows[currentSelectionUser].Cells[0].Value}?", "Confirm", MessageBoxButtons.YesNo);
@@ -479,6 +484,12 @@ namespace sobran
         public string strReplace(string str)
         {
             return str.Replace('/', '_');
+        }
+
+        private void btnUpadte_Click(object sender, EventArgs e)
+        {
+            exportToCsv();
+            MessageBox.Show("Updated");
         }
     }
 }

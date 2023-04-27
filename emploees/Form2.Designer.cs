@@ -46,6 +46,7 @@
             this.btnOpenFile2 = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.btnPrintReport = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -222,12 +223,25 @@
             this.btnPrintReport.UseVisualStyleBackColor = true;
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Khaki;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(568, 560);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 42);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "update";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(58)))), ((int)(((byte)(87)))));
             this.ClientSize = new System.Drawing.Size(1096, 628);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnPrintReport);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnOpenFile2);
@@ -270,5 +284,6 @@
         private System.Windows.Forms.Button btnOpenFile2;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Button btnPrintReport;
+        private System.Windows.Forms.Button button1;
     }
 }

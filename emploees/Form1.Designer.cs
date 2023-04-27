@@ -48,6 +48,7 @@
             this.btnReports = new System.Windows.Forms.Button();
             this.btnGenerateAll = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnUpadte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -248,6 +249,19 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnUpadte
+            // 
+            this.btnUpadte.BackColor = System.Drawing.Color.Khaki;
+            this.btnUpadte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpadte.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUpadte.Location = new System.Drawing.Point(598, 561);
+            this.btnUpadte.Name = "btnUpadte";
+            this.btnUpadte.Size = new System.Drawing.Size(106, 40);
+            this.btnUpadte.TabIndex = 22;
+            this.btnUpadte.Text = "delete";
+            this.btnUpadte.UseVisualStyleBackColor = false;
+            this.btnUpadte.Click += new System.EventHandler(this.btnUpadte_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +269,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(58)))), ((int)(((byte)(87)))));
             this.ClientSize = new System.Drawing.Size(1125, 638);
+            this.Controls.Add(this.btnUpadte);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnGenerateAll);
             this.Controls.Add(this.btnReports);
@@ -299,6 +314,7 @@
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnGenerateAll;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUpadte;
     }
 }
 
